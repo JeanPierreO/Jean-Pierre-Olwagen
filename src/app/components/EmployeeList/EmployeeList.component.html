@@ -1,0 +1,26 @@
+
+<div class=" container-fluid row">
+
+    <div class="employee-list col-md-12">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Username</th>
+                <th>Gender</th>
+                <th>Email Adress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let employee of employees; let i = index" [attr.data-index]="i" (click) = 'employeeDetail(employee.id)'>
+                <th scope="row">{{i + 1}}</th>
+                <td>{{employee.Username}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.email}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  
+  
+

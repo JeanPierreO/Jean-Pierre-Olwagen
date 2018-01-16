@@ -1,0 +1,17 @@
+
+<div class=" container-fluid row">
+
+    <div class="employee-grid col-md-12">
+      <div  [style.border] = "employee.gender == 'Male' ? '1px solid #56CCF2' : '1px solid #F261AF'" class="card col-md-2" *ngFor='let employee of employees' (click) = 'employeeDetail(employee.id)'>
+        
+        <div>
+            <div class="circle" [style.background] = "employee.gender == 'Male' ? '#56CCF2' : '#F261AF'"></div>
+          <img [style.border] = "employee.gender == 'Male' ? '0.5px solid #56CCF2' : '0.5px solid #F261AF'" src="{{employee.Avatar}}" />
+          <br>
+          <h3>{{employee.Username}}</h3>
+          <h4>{{employee.Department}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  

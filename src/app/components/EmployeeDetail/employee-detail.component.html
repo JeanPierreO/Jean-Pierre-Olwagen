@@ -1,0 +1,18 @@
+<div class='container'>
+    <div [style.border] = "employee.gender == 'Male' ? '1px solid #56CCF2' : '1px solid #F261AF'" class="back-button" (click) = 'back()'></div>
+    <div class='col-md-4'> 
+        <div class='img-container'>
+            <img [style.border] = "employee.gender == 'Male' ? '1px solid #56CCF2' : '1px solid #F261AF'" src="{{employee.Avatar}}" />
+            <h1>{{employee.Username}}</h1>
+        </div>
+    </div>
+    <div [style.border-left] = "employee.gender == 'Male' ? '1px solid #56CCF2' : '1px solid #F261AF'" class='col-md-8 information-container'>
+        <ul class='information'>
+            <li>Gender: {{employee.gender}}</li>
+            <li>Firstname: {{employee.first_name}}</li>
+            <li>Lastname: {{employee.last_name}}</li>
+            <li>Department: {{employee.Department}}</li>
+            <li>Email: {{employee.email}}</li>
+        </ul>
+    </div>
+</div>
